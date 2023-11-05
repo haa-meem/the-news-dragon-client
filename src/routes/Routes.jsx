@@ -1,6 +1,5 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
-import Home from "../pages/Home/Home/Home";
 import Category from "../pages/Home/Category/Category";
 import NewsLayout from "../layouts/NewsLayout";
 import News from "../pages/News/News/News";
@@ -9,6 +8,8 @@ import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Terms from "../pages/Shared/Terms/Terms";
+import Publish from "../pages/Publish/Publish";
+import Published from "../pages/Publish/Published";
 
 const router=createBrowserRouter([
     {
@@ -30,7 +31,27 @@ const router=createBrowserRouter([
             {
                 path:'terms',
                 element:<Terms></Terms>
-            }
+            },
+            {
+                path: 'publish',
+                element: <PrivateRoute><Publish></Publish></PrivateRoute>
+            },
+            // {
+            //     path:'published',
+            //     element:<NewsLayout></NewsLayout>,
+            //     children:[
+            //         {
+            //             path:':id',
+            //             element:<PrivateRoute><Published></Published></PrivateRoute>,
+            //             loader:()=>fetch('https://the-news-dragon-server-haa-meem.vercel.app/publish')
+            //         }
+            //     ]
+            // },
+            {
+                path: 'published',
+                element: <Published></Published>,
+                loader:()=>fetch('https://the-news-dragon-server-haa-meem.vercel.app/publish')
+            },
         ]
     },
     {

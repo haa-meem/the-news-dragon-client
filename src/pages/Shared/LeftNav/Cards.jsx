@@ -1,46 +1,41 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import first from '../../../assets/1.png'
-import second from '../../../assets/2.png'
-import third from '../../../assets/3.png'
+import firstImage from '../../../assets/1.png'
+import secondImage from '../../../assets/2.png'
+import thirdImage from '../../../assets/3.png'
+
 const Cards = () => {
     return (
         <Row xs={1} md={2} lg={1} className="g-4 mt-4">
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={first} />
+                    <Card.Img variant="top" src={firstImage} />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                        <Card.Title>Our First Home</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
+                            A heartwarming moment as a girl holds a board that says "Our First Home." Share in the joy of creating new memories.
                         </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={second} />
+                    <Card.Img variant="top" src={secondImage} />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                        <Card.Title>Selfie with Friends</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
+                            Capture the fun times with friends in a memorable selfie. Create lasting memories with those who matter the most.
                         </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={third} />
+                    <Card.Img variant="top" src={thirdImage} />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                        <Card.Title>Camera Focusing on Stadium</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
+                            Witness the excitement as the camera focuses on a bustling stadium. Feel the energy of the crowd and the thrill of the event.
                         </Card.Text>
                     </Card.Body>
                 </Card>
